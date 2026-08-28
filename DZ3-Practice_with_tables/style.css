@@ -20,11 +20,11 @@ caption {
   border-bottom: none;
 }
 
-thead th {
+th {
   text-transform: uppercase;
 }
 
-thead th,
+th,
 caption {
   font-weight: 700;
 }
