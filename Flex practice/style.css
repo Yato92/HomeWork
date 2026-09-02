@@ -8,7 +8,6 @@ body * {
   max-width: 1320px;
   padding: 0 10px 20px 10px;
   margin: 0 auto;
-  border-bottom: 1px solid rgb(188, 187, 187);
 }
 
 .header-container {
@@ -16,6 +15,7 @@ body * {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  border-bottom: 1px solid rgb(188, 187, 187);
 }
 
 .header-logo {
