@@ -6,7 +6,7 @@ body * {
 
 .container {
   max-width: 1320px;
-  padding: 0 10px 20px 10px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 
@@ -16,6 +16,7 @@ body * {
   align-items: center;
   flex-wrap: wrap;
   border-bottom: 1px solid rgb(188, 187, 187);
+  padding-bottom: 30px 0px;
 }
 
 .header-logo {
