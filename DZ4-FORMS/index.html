@@ -3,16 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./normalize.css" />
     <link rel="stylesheet" href="./style.css" />
     <title>Forms</title>
   </head>
   <body>
     <form>
       <fieldset>
-        <legend>Ваши личные данные</legend>
+        <legend class="form-teg">Ваши личные данные</legend>
 
-        <label for="name">
-          <span>Ваще имя</span>
+        <label>
+          <span>Ваше имя</span>
           <input
             id="name"
             type="text"
@@ -23,7 +24,7 @@
           />
         </label>
 
-        <label for="age">
+        <label>
           <span>Ваш возраст</span>
           <input
             id="age"
@@ -35,7 +36,7 @@
           />
         </label>
 
-        <label for="phone">
+        <label>
           <span>Ваш номер телефона</span>
           <input
             id="phone"
@@ -47,7 +48,7 @@
           />
         </label>
 
-        <label for="email">
+        <label>
           <span>Ваша почта</span>
           <input
             id="email"
@@ -58,8 +59,10 @@
             class="grow-up"
           />
         </label>
+      </fieldset>
 
-        <label for="massage">
+      <fieldset>
+        <label>
           <span>Сообщение</span>
           <textarea
             id="massage"
@@ -70,12 +73,12 @@
           ></textarea>
         </label>
 
-        <label for="acceptance" class="block">
+        <label class="block checkbox">
           <input id="acceptance" type="checkbox" required />
           <span class="mb">Я принимаю правила</span>
         </label>
-        <button>Отправить</button>
       </fieldset>
+      <button>Отправить</button>
     </form>
   </body>
 </html>
