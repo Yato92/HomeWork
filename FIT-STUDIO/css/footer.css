@@ -1,0 +1,47 @@
+.footer {
+  background: linear-gradient(
+    90deg,
+    rgba(73, 169, 255, 0.2) 0%,
+    rgba(252, 124, 217, 0.2) 100%
+  );
+  padding: 60px 0 40px;
+  text-align: center;
+  margin-top: auto;
+}
+.footer-top {
+  border-bottom: 1px solid #d3cbd9;
+}
+.footer-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+.footer-list-items a {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #535755;
+  transition: color 0.2s;
+}
+
+.footer-list-items a:hover {
+  color: #3596ed;
+}
+
+.footer-nav {
+  padding: 40px 0;
+}
+
+.footer-bottom {
+  padding-top: 40px;
+}
+.footer-bottom-text {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: #858e8a;
+}
