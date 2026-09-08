@@ -8,6 +8,7 @@
   text-align: center;
   margin-top: auto;
 }
+
 .footer-top {
   border-bottom: 1px solid #d3cbd9;
 }
@@ -44,4 +45,10 @@
   font-size: 14px;
   letter-spacing: 0.04em;
   color: #858e8a;
+}
+
+.footer-logo:hover {
+  animation: logo-animation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
