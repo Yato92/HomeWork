@@ -61,9 +61,16 @@
     transform 0.2s;
 }
 
-.hero-bottom:focus-visible {
-  outline: 2px solid #318ad8;
-  outline-offset: 1px;
+.hero-bottom:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.hero-bottom:disabled:hover {
+  opacity: 0.5;
+  cursor: default;
+  transform: none;
+  background-color: #3596ed;
 }
 
 .hero-bottom:hover {
@@ -180,4 +187,88 @@
 
 .news-info-link:hover::after {
   transform: translateX(5px);
+}
+
+.faq {
+  position: relative;
+  margin-bottom: 140px;
+}
+
+.faq::before {
+  content: "";
+  position: absolute;
+  top: 215px;
+  z-index: -1;
+  width: calc(50% - 350px);
+  height: 48px;
+  background-image: url("../img/hero-decor.svg");
+}
+
+.faq-h2 {
+  margin-bottom: 40px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 115%;
+  text-transform: uppercase;
+  color: #2c332f;
+}
+
+.faq-container {
+  display: flex;
+  gap: 28px;
+}
+
+.faq-accordion-p {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #535755;
+  padding: 0 20px 20px 20px;
+}
+.faq-accordion-tag {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 115%;
+  text-transform: uppercase;
+  color: #2c332f;
+  padding: 19px;
+}
+
+summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+}
+
+summary::after {
+  content: "";
+  width: 20px;
+  height: 17px;
+  display: inline-block;
+  background-image: url("../img/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: transform, 0.2s;
+}
+
+summary::webkit-details-marker {
+  display: none;
+}
+
+details[open] summary::after {
+  transform: rotate(540deg);
+}
+
+details {
+  margin-bottom: 20px;
+  border-top: 1px solid #d3cbd9;
+  border-bottom: 1px solid #d3cbd9;
 }
