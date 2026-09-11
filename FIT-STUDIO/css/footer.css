@@ -52,3 +52,24 @@
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
+
+@media (width <= 768px) {
+  .footer-list {
+    gap: 25px;
+    flex-direction: column;
+  }
+}
+
+@media (width <= 768px) {
+  .footer-list {
+    gap: 25px;
+    flex-direction: column;
+  }
+}
+
+@media (width <= 576px) {
+  .footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}

@@ -64,6 +64,7 @@
 .article-list {
   margin-top: 0px;
   padding-left: 22px;
+  list-style-type: disc;
 }
 .list-item::marker {
   color: #3596ed;
@@ -83,11 +84,6 @@
   margin-bottom: 0;
 }
 
-.article-video,
-.article-image {
-  width: 100%;
-}
-
 .article-play-button {
   background-color: #3596ed;
   width: 60px;
@@ -100,10 +96,14 @@
   justify-content: center;
   cursor: pointer;
   position: absolute;
-  top: calc(50% - 60px);
-  left: calc(50% - 60px);
-  transform: translate(50%, 50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   transition: opacity, 0.2s;
+}
+
+.article-play-button img {
+  object-fit: contain;
 }
 
 .article-play-button:hover {
@@ -113,4 +113,57 @@
 .article-play-button:disabled {
   opacity: 0.5;
   cursor: default;
+}
+
+@media (width <= 992px) {
+  .article-mb80 {
+    margin-bottom: 50px;
+  }
+  .article-play-button {
+    width: 50px;
+    height: 50px;
+  }
+  .article-play-button img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .article {
+    margin-bottom: 60px;
+  }
+}
+
+@media (width <= 768px) {
+  .article-title {
+    font-size: 40px;
+  }
+
+  .article-title-h2 {
+    font-size: 35px;
+  }
+  .article-decor-wrapper::before,
+  .article-decor-wrapper::after {
+    display: none;
+  }
+}
+
+@media (width <= 576px) {
+  .article-title {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  .article-title-h2 {
+    font-size: 26px;
+  }
+  .article {
+    padding-top: 60px;
+  }
+  .article-play-button {
+    width: 40px;
+    height: 40px;
+  }
+  .article-play-button img {
+    width: 15px;
+    height: 15px;
+  }
 }
