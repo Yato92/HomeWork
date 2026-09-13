@@ -15,12 +15,12 @@
   z-index: -1;
 }
 
-.hero-container {
+.hero__container {
   display: flex;
   gap: 28px;
 }
 
-.hero h1 {
+.hero__title {
   font-family: "Oswald", sans-serif;
   font-weight: 600;
   font-size: 62px;
@@ -30,11 +30,11 @@
   margin-bottom: 40px;
 }
 
-.hero-info h1 strong {
+.hero__word--accent {
   color: #3596ed;
 }
 
-.hero-info p {
+.hero__text {
   max-width: 439px;
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
@@ -44,11 +44,11 @@
   margin-bottom: 140px;
 }
 
-.hero-info {
+.hero__info {
   max-width: 492px;
 }
 
-.hero-bottom {
+.hero__button {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   font-size: 15px;
@@ -64,28 +64,28 @@
     transform 0.2s;
 }
 
-.hero-bottom:disabled {
+.hero__button--disabled:disabled {
   opacity: 0.5;
   cursor: default;
 }
 
-.hero-bottom:disabled:hover {
+.hero__button--disabled:disabled:hover {
   opacity: 0.5;
   cursor: default;
   transform: none;
   background-color: #3596ed;
 }
 
-.hero-bottom:hover {
+.hero__button--zoom:hover {
   transform: scale(1.1);
   background-color: #318ad8;
 }
 
-.hero-img {
+.hero__image {
   display: flex;
   position: relative;
 }
-.hero-img-choose {
+.hero__image-choose {
   position: absolute;
   top: 40px;
   left: 50%;
@@ -103,26 +103,29 @@
   text-align: center;
 }
 
-.news-container {
+.news__container {
   display: flex;
   gap: 28px;
 }
-
-.news-article {
-  border: 1px solid #d3cbd9;
-  background-color: #fff;
+.news__article {
   max-width: 284px;
-  overflow: hidden;
-  transition: transform 0.2s;
+  flex: 1 1 25%;
   display: flex;
   flex-direction: column;
-  flex: 1 1 25%;
 }
-.news-article:hover {
+
+.news-card {
+  border: 1px solid #d3cbd9;
+  background-color: #fff;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.news-card--zoom:hover {
   transform: scale(1.1);
 }
 
-.news-h2 {
+.news__title {
   font-family: "Oswald", sans-serif;
   font-weight: 600;
   font-size: 48px;
@@ -132,20 +135,22 @@
   margin-bottom: 40px;
 }
 
-.news-article img {
+.news-card__image {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
-.news-info {
+.news-card__info {
   padding: 20px 20px 0 20px;
 }
 
-.news-article footer {
+.news-card__footer {
   margin-top: auto;
   padding: 0 20px 20px 20px;
 }
 
-.news-info-data {
+.news-card__data {
   display: inline-block;
   margin-bottom: 8px;
   font-family: "Ubuntu", sans-serif;
@@ -156,7 +161,7 @@
   color: #858e8a;
 }
 
-.news-info-h3 {
+.news-card__title {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -165,7 +170,7 @@
   margin-bottom: 12px;
 }
 
-.news-info-link {
+.news-card__link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -174,9 +179,10 @@
   font-size: 16px;
   line-height: 130%;
   color: #3596ed;
+  text-decoration: none;
 }
 
-.news-info-link::after {
+.news-card__link::after {
   content: "";
   display: block;
   position: relative;
@@ -189,7 +195,7 @@
   transition: transform 0.2s;
 }
 
-.news-info-link:hover::after {
+.news-card__link--movement-right:hover::after {
   transform: translateX(5px);
 }
 
@@ -207,7 +213,7 @@
   background-image: url("../img/hero-decor.svg");
 }
 
-.faq-h2 {
+.faq__title {
   margin-bottom: 40px;
   font-family: "Oswald", sans-serif;
   font-weight: 600;
@@ -217,12 +223,12 @@
   color: #2c332f;
 }
 
-.faq-container {
+.faq__container {
   display: flex;
   gap: 28px;
 }
 
-.faq-accordion-p {
+.accordion__text {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -230,7 +236,7 @@
   color: #535755;
   padding: 0 20px 20px 20px;
 }
-.faq-accordion-tag {
+.accordion__title {
   font-family: "Oswald", sans-serif;
   font-weight: 500;
   font-size: 24px;
@@ -240,7 +246,7 @@
   padding: 19px;
 }
 
-summary {
+.accordion__title {
   list-style: none;
   display: flex;
   align-items: center;
@@ -250,7 +256,7 @@ summary {
   user-select: none;
 }
 
-summary::after {
+.accordion__title::after {
   content: "";
   width: 20px;
   height: 17px;
@@ -263,32 +269,33 @@ summary::after {
   transition: transform, 0.2s;
 }
 
-summary::webkit-details-marker {
+.accordion__title::webkit-details-marker {
   display: none;
 }
 
-details[open] summary::after {
+.accordion__container[open] .accordion__title::after {
   transform: rotate(540deg);
 }
 
-details {
+.accordion__container {
   margin-bottom: 20px;
   border-top: 1px solid #d3cbd9;
   border-bottom: 1px solid #d3cbd9;
 }
 
-details:last-child {
+.accordion__container:last-child {
   margin-bottom: 0px;
 }
 
 @media (width <= 1440px) {
-  .hero-img img {
+  .hero__image-women,
+  .hero__image-man {
     width: 50%;
   }
 }
 
 @media (width <= 992px) {
-  .hero-container {
+  .hero__container {
     flex-direction: column;
     align-items: center;
   }
@@ -297,44 +304,44 @@ details:last-child {
     display: none;
   }
 
-  .hero-info {
+  .hero__info {
     text-align: center;
   }
 
-  .hero-info p {
+  .hero__text {
     max-width: none;
     margin-bottom: 30px;
   }
 
-  .hero-info h1 {
+  .hero__title {
     font-size: 52px;
     margin-bottom: 30px;
   }
 
-  .news-container {
+  .news__container {
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
   }
 
-  .news-article {
+  .news__article {
     max-width: 400px;
     flex-basis: 50%;
   }
 
-  .news-article img {
+  .news-card__image {
     width: 100%;
   }
 
-  .news-article:hover {
+  .news__article--zoom:hover {
     transition: none;
     transform: none;
   }
-  .news-h2 {
+  .news__title {
     text-align: center;
   }
 
-  .faq-container {
+  .faq__container {
     flex-direction: column-reverse;
     align-items: center;
   }
@@ -342,34 +349,34 @@ details:last-child {
   .faq::before {
     display: none;
   }
-  .faq-h2 {
+  .faq__title {
     text-align: center;
   }
 }
 
 @media (width <= 768px) {
-  .hero-info h1 {
+  .hero__title {
     font-size: 50px;
   }
-  .news-h2 {
+  .news__title {
     text-align: center;
     font-size: 40px;
     max-width: inherit;
     margin-bottom: 30px;
   }
 
-  .news-article:hover {
+  .news__article--zoom:hover {
     transition: none;
     transform: none;
   }
-  .faq-h2 {
+  .faq__title {
     text-align: center;
     font-size: 40px;
     max-width: inherit;
     margin-bottom: 30px;
   }
 
-  .faq-accordion-tag {
+  .accordion__title {
     font-size: 22px;
   }
 }
@@ -379,27 +386,27 @@ details:last-child {
     padding-top: 60px;
   }
 
-  .hero-info {
+  .hero__info {
     max-width: 410px;
   }
-  .hero-info h1 {
+  .hero__title {
     font-size: 42;
   }
 
-  .hero-img-choose {
+  .hero__image-choose {
     padding: 10px;
     font-size: 14px;
     max-width: 125px;
   }
 
-  .news-h2 {
+  .news__title {
     font-size: 34px;
   }
-  .faq-h2 {
+  .faq__title {
     font-size: 34px;
   }
 
-  .faq-accordion-tag {
+  .accordion__title {
     font-size: 18px;
   }
 }

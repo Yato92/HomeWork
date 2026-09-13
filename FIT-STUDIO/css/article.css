@@ -8,7 +8,7 @@
   margin-bottom: 40px;
 }
 
-.article-title {
+.article-style-title {
   font-family: "Oswald", sans-serif;
   font-weight: 600;
   line-height: 115%;
@@ -18,14 +18,14 @@
   margin-bottom: 40px;
 }
 
-.article-title-h1 {
+.article__title {
   font-size: 48px;
 }
-.article-title-h2 {
+.article__subtitle {
   font-size: 36px;
 }
 
-.article-text {
+.article__text {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -47,31 +47,31 @@
   width: 528px;
   height: 48px;
 }
-.article-decor-wrapper-1::after,
-.article-decor-wrapper-2::before {
+.article-decor-wrapper__left::after,
+.article-decor-wrapper__right::before {
   display: none;
 }
 
-.article-decor-wrapper-1::before {
+.article-decor-wrapper__left::before {
   top: 100px;
   left: -350px;
 }
 
-.article-decor-wrapper-2::after {
+.article-decor-wrapper__right::after {
   bottom: 136px;
 }
 
-.article-list {
+.article__list {
   margin-top: 0px;
   padding-left: 22px;
   list-style-type: disc;
 }
-.list-item::marker {
+.article__list-item--accent::marker {
   color: #3596ed;
   font-size: 25px;
 }
 
-.list-item {
+.article__list-item {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -80,11 +80,11 @@
   margin-bottom: 12px;
 }
 
-.list-item:last-child {
+.article__list-item:last-child {
   margin-bottom: 0;
 }
 
-.article-play-button {
+.article__button {
   background-color: #3596ed;
   width: 60px;
   height: 60px;
@@ -102,15 +102,15 @@
   transition: opacity, 0.2s;
 }
 
-.article-play-button img {
+.article__image-button {
   object-fit: contain;
 }
 
-.article-play-button:hover {
+.article__button:hover {
   opacity: 0.9;
 }
 
-.article-play-button:disabled {
+.article__button--disabled:disabled {
   opacity: 0.5;
   cursor: default;
 }
@@ -119,11 +119,11 @@
   .article-mb80 {
     margin-bottom: 50px;
   }
-  .article-play-button {
+  .article__button {
     width: 50px;
     height: 50px;
   }
-  .article-play-button img {
+  .article__image-button {
     width: 18px;
     height: 18px;
   }
@@ -134,11 +134,11 @@
 }
 
 @media (width <= 768px) {
-  .article-title {
+  .article__title {
     font-size: 40px;
   }
 
-  .article-title-h2 {
+  .article__subtitle {
     font-size: 35px;
   }
   .article-decor-wrapper::before,
@@ -148,21 +148,21 @@
 }
 
 @media (width <= 576px) {
-  .article-title {
+  .article__title {
     font-size: 30px;
     margin-bottom: 30px;
   }
-  .article-title-h2 {
+  .article__subtitle {
     font-size: 26px;
   }
   .article {
     padding-top: 60px;
   }
-  .article-play-button {
+  .article__button {
     width: 40px;
     height: 40px;
   }
-  .article-play-button img {
+  .article__image-button {
     width: 15px;
     height: 15px;
   }

@@ -62,7 +62,7 @@ button {
 
 a:focus-visible,
 button:focus-visible,
-summary:focus-visible {
+.accordion__title:focus-visible {
   outline: 2px solid #318ad8;
   outline-offset: 1px;
 }

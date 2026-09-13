@@ -1,4 +1,4 @@
-.header-inner {
+.header__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,11 +22,11 @@
   }
 }
 
-.header-contact {
+.header__contacts {
   text-align: right;
 }
 
-.header-contact-text {
+.header__contact-text {
   margin-bottom: 8px;
   font-family: Ubuntu, sans-serif;
   font-weight: 300;
@@ -36,7 +36,7 @@
   color: #858e8a;
 }
 
-.header-contact-phone {
+.header__contact-phone {
   font-family: Ubuntu, sans-serif;
   font-weight: 500;
   font-size: 18px;
@@ -44,11 +44,11 @@
   transition: color 0.2s;
 }
 
-.header-contact-phone:hover {
+.header__contact-phone:hover {
   color: #3596ed;
 }
 
-.header-logo:hover {
+.header__logo--shaking:hover {
   animation: logo-animation;
   animation-duration: 1s;
   animation-iteration-count: infinite;
