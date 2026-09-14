@@ -30,7 +30,7 @@
   margin-bottom: 40px;
 }
 
-.hero__word--accent {
+.hero__word {
   color: #3596ed;
 }
 
@@ -121,7 +121,7 @@
   transition: transform 0.2s;
 }
 
-.news-card--zoom:hover {
+.news__article--zoom:hover {
   transform: scale(1.1);
 }
 
