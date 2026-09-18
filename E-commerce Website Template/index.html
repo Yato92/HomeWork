@@ -1,0 +1,144 @@
+<!doctype html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="icon"
+      href="./icons/nike-favicon.icon.svg"
+      type="image/svg+xml"
+    />
+    <title>SHOP.CO</title>
+
+    <script src="./js/index.js" type="module"></script>
+  </head>
+  <body class="page__body">
+    <header class="header">
+      <div class="promo-bar">
+        <div class="promo-bar__container container">
+          <p class="promo-bar__text">
+            Зарегестрируйтесь и получите скидку 20% на первую покупку.
+          </p>
+          <a class="promo-bar__link" href="#">Зарегестрироваться сейчас</a>
+
+          <button class="promo-bar__icon-close">
+            <svg width="14" height="14">
+              <use
+                aria-label="Закрытие рекламы регистрации"
+                class="promo-bar__icon"
+                href="./icons/header-sprite.svg#promo-bar-close"
+              ></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="header-main">
+        <div class="header-main__container container">
+          <button
+            class="header-main__burger burger"
+            aria-expanded="false"
+            aria-label="Открыть меню"
+            aria-controls="header-main__menu"
+          >
+            <svg width="19" height="15">
+              <use
+                class="burger__icon-menu"
+                href="./icons/header-sprite.svg#burger-menu"
+              ></use>
+
+              <use
+                class="burger__icon-cross"
+                href="./icons/header-sprite.svg#cross"
+              ></use>
+            </svg>
+          </button>
+
+          <a class="header-main__logo" href="/index.html">SHOP.CO</a>
+
+          <nav class="header-main__menu menu" id="header-main__menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="#">Магазин</a>
+
+                <button class="menu__button">
+                  <svg width="12" height="7">
+                    <use
+                      class="menu__icon"
+                      aria-label="Декорация"
+                      href="./icons/header-sprite.svg#arrow-down"
+                    ></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Скидки</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Новые поступления</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Бренды</a>
+              </li>
+            </ul>
+          </nav>
+
+          <form class="header-main__search search">
+            <label class="search__label" for="global-search">
+              <button class="search__button" id="global-search" title="Найти">
+                <svg width="20" height="20">
+                  <use
+                    aria-label=" Кнопка для поиска товаров через строку"
+                    class="search__icon"
+                    href="./icons/header-sprite.svg#search-input"
+                  ></use>
+                </svg>
+              </button>
+            </label>
+
+            <input
+              class="search__input"
+              type="search"
+              name="search"
+              aria-label="Поиск товаров"
+              placeholder="Искать товары..."
+            />
+          </form>
+
+          <div class="header-main__buttons">
+            <button class="header-main__search-icon">
+              <svg width="21" height="21">
+                <use
+                  aria-label="Кнопка поиска"
+                  class="header-main__search-icon-glass"
+                  href="./icons/header-sprite.svg#search"
+                ></use>
+              </svg>
+            </button>
+
+            <button class="header-main__basket" title="Корзина">
+              <svg width="24" height="24">
+                <use
+                  aria-label="Корзина для выбранных товаров"
+                  class="header-main__icon-bascet"
+                  href="./icons/header-sprite.svg#basket"
+                ></use>
+              </svg>
+            </button>
+
+            <button class="header-main__profile" title="Профиль">
+              <svg width="24" height="24">
+                <use
+                  aria-label="Переход в личный кабинет"
+                  class="header-main__icon-profile"
+                  href="./icons/header-sprite.svg#profile"
+                ></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>

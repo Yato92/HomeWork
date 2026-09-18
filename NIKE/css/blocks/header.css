@@ -6,6 +6,7 @@
   padding-block: 32px;
   background-color: var(--bg-color);
   transition: box-shadow var(--transition-time);
+  z-index: var(--layers-1);
 }
 
 .header--fixed {

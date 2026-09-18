@@ -1,0 +1,36 @@
+:root {
+  /* FONTS */
+  --font-family: "Satoshi", sans-serif;
+  --second-family: "FONTSPRING DEMO - Integral CF", sans-serif;
+  --third-family: "Integral CF", sans-serif;
+  --font-other: "Inter", sans-serif;
+
+  /* FONTS COLORS */
+  --font-second-color: #000;
+  --nav-font-color: #000;
+  --p-font-color: rgba(0, 0, 0, 0.6);
+
+  /* CONTAINER */
+
+  --container-width: 1240px;
+  --container-padding: 15px;
+
+  /* COLORS */
+
+  --bg-main-color: #fff;
+  --accent-color: #000;
+  --bg-hero-color: #f2f0f1;
+  --bg-cards-color: #f0eeed;
+  --bg-own-style: #f0f0f0;
+  --bg-footer: #f0f0f0;
+
+  /* transitions */
+
+  --transition-time: 0.2s;
+
+  /* layers */
+  --layers-negative: -1;
+  --layers-1: 1;
+  --layers-2: 2;
+  --layers-3: 3;
+}

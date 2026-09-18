@@ -1,0 +1,128 @@
+.header-main {
+  padding-block: 24px;
+}
+
+.header-main__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (width > 1200px) {
+  .header-main__container {
+    gap: 40px;
+  }
+}
+
+@media (width <= 1200px) {
+  .header-main__container {
+    gap: 20px;
+  }
+}
+
+@media (width <= 992px) {
+  .header-main__container {
+    gap: 12px;
+  }
+}
+
+.header-main__logo {
+  position: relative;
+  font-family: var(--third-family);
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--font-second-color);
+  align-self: center;
+  transform: translateY(-3px);
+}
+
+@media (width <= 992px) {
+  .header-main__logo {
+    width: fit-content;
+    margin-right: auto;
+  }
+}
+
+@media (width > 768px) {
+  .header-main__logo {
+    font-size: 32px;
+  }
+}
+
+@media (width <= 768px) {
+  .header-main__logo {
+    font-size: 25px;
+  }
+}
+
+@media (width > 992px) {
+  .header-main__search {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+}
+
+@media (width <= 992px) {
+  .header-main__search {
+    display: none;
+  }
+}
+
+.search {
+  flex-grow: 1;
+  background: #f0f0f0;
+  border-radius: 62px;
+  padding: 12px 16px;
+  max-height: 48px;
+}
+
+.search__label {
+  cursor: pointer;
+  transform: translateY(2px);
+}
+
+.search__input {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.4);
+  border: none;
+  background: transparent;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 100%;
+  outline: transparent;
+}
+
+.header-main__buttons {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.header-main__basket,
+.header-main__profile,
+.header-main__search-icon {
+  transition: transform var(--transition-time);
+}
+
+.header-main__basket:active,
+.header-main__profile:active,
+.header-main__search-icon:active {
+  transform: scale(1.05);
+}
+
+@media (width > 992px) {
+  .header-main__search-icon {
+    display: none;
+  }
+}
+
+@media (width <= 992px) {
+  .header-main__search-icon {
+    display: flex;
+  }
+}
