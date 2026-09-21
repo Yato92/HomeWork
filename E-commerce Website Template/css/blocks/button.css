@@ -1,0 +1,7 @@
+.button {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--btn-color);
+  padding: 15px 47px;
+  border-radius: 62px;
+}

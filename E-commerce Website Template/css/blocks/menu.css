@@ -1,10 +1,10 @@
 @media (width > 992px) {
-  .header-main__menu {
+  .header__menu {
     display: inline-block;
   }
 }
 @media (width <= 992px) {
-  .header-main__menu {
+  .header__menu {
     position: fixed;
     left: -100vw;
     top: 0;
@@ -22,13 +22,13 @@
       visibility var(--transition-time);
   }
 
-  .header-main__menu--open {
+  .header__menu--open {
     left: 0;
     opacity: 1;
     visibility: visible;
   }
 
-  .header-main__menu .menu__list {
+  .header__menu .menu__list {
     flex-direction: column;
     align-items: flex-start;
     text-align: start;

@@ -1,0 +1,47 @@
+.logos {
+  background-color: var(--accent-color);
+}
+
+.logos__wrapper {
+  padding-block: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 106px;
+  flex-wrap: wrap;
+}
+
+.logos__wrapper picture {
+  flex: 0 0 auto;
+}
+
+.logos__wrapper-img {
+  display: block;
+}
+
+@media (width <= 1300px) {
+  .logos__wrapper {
+    justify-content: center;
+    gap: 34px;
+  }
+  #versace {
+    width: 116px;
+    height: 23px;
+  }
+  #zara {
+    width: 64px;
+    height: 26px;
+  }
+  #gucci {
+    width: 109px;
+    height: 25px;
+  }
+  #prada {
+    width: 127px;
+    height: 21px;
+  }
+  #calvinKlein {
+    width: 137px;
+    height: 25px;
+  }
+}

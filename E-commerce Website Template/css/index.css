@@ -6,7 +6,10 @@
 
 /* BLOCKS */
 
-@import "./blocks/header-main.css";
-@import "./blocks/promo.css";
+@import "./blocks/header.css";
+@import "./blocks/aside-promo.css";
 @import "./blocks/menu.css";
 @import "./blocks/burger.css";
+@import "./blocks/hero.css";
+@import "./blocks/button.css";
+@import "./blocks/aside-logos.css";

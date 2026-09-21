@@ -14,7 +14,7 @@
     <script src="./js/index.js" type="module"></script>
   </head>
   <body class="page__body">
-    <header class="header">
+    <aside class="aside">
       <div class="promo-bar">
         <div class="promo-bar__container container">
           <p class="promo-bar__text">
@@ -35,122 +35,241 @@
           </button>
         </div>
       </div>
+    </aside>
 
-      <div class="header-main">
-        <div class="header-main__container container">
-          <button
-            class="header-main__burger burger"
-            aria-expanded="false"
-            aria-label="Открыть меню"
-            aria-controls="header-main__menu"
-          >
-            <svg width="19" height="15">
-              <use
-                class="burger__icon-menu"
-                href="./icons/header-sprite.svg#burger-menu"
-              ></use>
+    <header class="header">
+      <div class="header__container container">
+        <button
+          class="header__burger burger"
+          aria-expanded="false"
+          aria-label="Открыть меню"
+          aria-controls="header__menu"
+        >
+          <svg width="19" height="15">
+            <use
+              class="burger__icon-menu"
+              href="./icons/header-sprite.svg#burger-menu"
+            ></use>
 
+            <use
+              class="burger__icon-cross"
+              href="./icons/header-sprite.svg#cross"
+            ></use>
+          </svg>
+        </button>
+
+        <a class="header__logo" href="/index.html">SHOP.CO</a>
+
+        <nav class="header__menu menu" id="header__menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Магазин</a>
+
+              <button class="menu__button" aria-label="Декорация">
+                <svg width="12" height="7">
+                  <use
+                    class="menu__icon"
+                    href="./icons/header-sprite.svg#arrow-down"
+                  ></use>
+                </svg>
+              </button>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Скидки</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Новые поступления</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Бренды</a>
+            </li>
+          </ul>
+        </nav>
+
+        <form class="header__search search">
+          <label class="search__label" for="global-search">
+            <button
+              class="search__button"
+              id="global-search"
+              title="Найти"
+              aria-label=" Кнопка для поиска товаров через строку"
+            >
+              <svg width="20" height="20">
+                <use
+                  class="search__icon"
+                  href="./icons/header-sprite.svg#search-input"
+                ></use>
+              </svg>
+            </button>
+          </label>
+
+          <input
+            class="search__input"
+            type="search"
+            name="search"
+            aria-label="Поиск товаров"
+            placeholder="Искать товары..."
+          />
+        </form>
+
+        <div class="header__buttons">
+          <button class="header__search-icon" aria-label="Кнопка поиска">
+            <svg width="21" height="21">
               <use
-                class="burger__icon-cross"
-                href="./icons/header-sprite.svg#cross"
+                class="header__search-icon-glass"
+                href="./icons/header-sprite.svg#search"
               ></use>
             </svg>
           </button>
 
-          <a class="header-main__logo" href="/index.html">SHOP.CO</a>
+          <button
+            class="header__basket"
+            title="Корзина"
+            aria-label="Корзина для выбранных товаров"
+          >
+            <svg width="24" height="24">
+              <use
+                class="header__icon-bascet"
+                href="./icons/header-sprite.svg#basket"
+              ></use>
+            </svg>
+          </button>
 
-          <nav class="header-main__menu menu" id="header-main__menu">
-            <ul class="menu__list">
-              <li class="menu__item">
-                <a class="menu__link" href="#">Магазин</a>
-
-                <button class="menu__button" aria-label="Декорация">
-                  <svg width="12" height="7">
-                    <use
-                      class="menu__icon"
-                      href="./icons/header-sprite.svg#arrow-down"
-                    ></use>
-                  </svg>
-                </button>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Скидки</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Новые поступления</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Бренды</a>
-              </li>
-            </ul>
-          </nav>
-
-          <form class="header-main__search search">
-            <label class="search__label" for="global-search">
-              <button
-                class="search__button"
-                id="global-search"
-                title="Найти"
-                aria-label=" Кнопка для поиска товаров через строку"
-              >
-                <svg width="20" height="20">
-                  <use
-                    class="search__icon"
-                    href="./icons/header-sprite.svg#search-input"
-                  ></use>
-                </svg>
-              </button>
-            </label>
-
-            <input
-              class="search__input"
-              type="search"
-              name="search"
-              aria-label="Поиск товаров"
-              placeholder="Искать товары..."
-            />
-          </form>
-
-          <div class="header-main__buttons">
-            <button class="header-main__search-icon" aria-label="Кнопка поиска">
-              <svg width="21" height="21">
-                <use
-                  class="header-main__search-icon-glass"
-                  href="./icons/header-sprite.svg#search"
-                ></use>
-              </svg>
-            </button>
-
-            <button
-              class="header-main__basket"
-              title="Корзина"
-              aria-label="Корзина для выбранных товаров"
-            >
-              <svg width="24" height="24">
-                <use
-                  class="header-main__icon-bascet"
-                  href="./icons/header-sprite.svg#basket"
-                ></use>
-              </svg>
-            </button>
-
-            <button
-              class="header-main__profile"
-              title="Профиль"
-              aria-label="Переход в личный кабинет"
-            >
-              <svg width="24" height="24">
-                <use
-                  class="header-main__icon-profile"
-                  href="./icons/header-sprite.svg#profile"
-                ></use>
-              </svg>
-            </button>
-          </div>
+          <button
+            class="header__profile"
+            title="Профиль"
+            aria-label="Переход в личный кабинет"
+          >
+            <svg width="24" height="24">
+              <use
+                class="header__icon-profile"
+                href="./icons/header-sprite.svg#profile"
+              ></use>
+            </svg>
+          </button>
         </div>
       </div>
     </header>
 
-    <main class="main"></main>
+    <main class="main">
+      <section class="hero">
+        <div class="hero__container container">
+          <div class="hero__content">
+            <h1 class="hero__title">
+              НАЙДИ ОДЕЖДУ<br />КОТОРАЯ ВЫРАЗИТ<br />ТВОЙ СТИЛЬ
+            </h1>
+            <p class="hero__text text-description">
+              Просмотрите наш набор тщательно сделанной одежды, созданный чтобы
+              подчеркнуть ваш индивидуальный стиль.
+            </p>
+            <a class="hero__button button" href="#" aria-label="Кнопка покупки"
+              >Купить сейчас</a
+            >
+
+            <div class="hero__wrapper">
+              <article class="hero__article-text">
+                <p class="hero__number">200+</p>
+                <p class="hero__description text-description">
+                  Всемирных брендов
+                </p>
+              </article>
+
+              <article class="hero__article-text">
+                <p class="hero__number">2,000+</p>
+                <p class="hero__description text-description">
+                  Качественных товаров
+                </p>
+              </article>
+
+              <article class="hero__article-text">
+                <p class="hero__number">30,000+</p>
+                <p class="hero__description text-description">
+                  Счастливых клиентов
+                </p>
+              </article>
+            </div>
+          </div>
+          <picture class="hero__image-wrapper">
+            <source srcset="./image/bg-hero.webp" type="image/webp" />
+            <img
+              class="hero__image"
+              width="620"
+              height="617"
+              src="./image/bg-hero.png"
+              alt="Парень и девушка в очках и белых худи, сверху одеты в серую джинсовку "
+            />
+          </picture>
+        </div>
+      </section>
+
+      <aside class="logos">
+        <div class="logos__container container">
+          <div class="logos__wrapper">
+            <picture>
+              <source srcset="./image/logos/versace.webp" type="image/webp" />
+              <img
+                id="versace"
+                width="166"
+                height="33"
+                class="logos__wrapper-img"
+                src="./image/logos/versace.png"
+                alt="Логотип бренда versace"
+              />
+            </picture>
+
+            <picture>
+              <source srcset="./image/logos/zara.webp" type="image/webp" />
+              <img
+                id="zara"
+                width="91"
+                height="38"
+                class="logos__wrapper-img"
+                src="./image/logos/zara.png"
+                alt="Логотип бренда zara"
+              />
+            </picture>
+
+            <picture>
+              <source srcset="./image/logos/gucci.webp" type="image/webp" />
+              <img
+                id="gucci"
+                width="156"
+                height="36"
+                class="logos__wrapper-img"
+                src="./image/logos/gucci.png"
+                alt="Логотип бренда gucci"
+              />
+            </picture>
+
+            <picture>
+              <source srcset="./image/logos/prada.webp" type="image/webp" />
+              <img
+                id="prada"
+                width="194"
+                height="32"
+                class="logos__wrapper-img"
+                src="./image/logos/prada.png"
+                alt="Логотип бренда prada"
+              />
+            </picture>
+
+            <picture>
+              <source
+                srcset="./image/logos/calvinKlein.webp"
+                type="image/webp"
+              />
+              <img
+                id="calvinKlein"
+                width="207"
+                height="34"
+                class="logos__wrapper-img"
+                src="./image/logos/calvinKlein.png"
+                alt="Логотип бренда calvinKlein"
+              />
+            </picture>
+          </div>
+        </div>
+      </aside>
+    </main>
   </body>
 </html>

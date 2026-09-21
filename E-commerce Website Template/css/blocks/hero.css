@@ -1,0 +1,241 @@
+.hero {
+  background-color: var(--bg-hero-color);
+  overflow: hidden;
+}
+
+.hero__container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: var(--layers-1);
+}
+
+@media (width > 768px) {
+  .hero__container {
+    padding-top: 120px;
+  }
+}
+
+@media (width <= 768px) {
+  .hero__container {
+    padding-top: 40px;
+  }
+}
+
+@media (width <= 1200px) {
+  .hero__container {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+
+.hero__content {
+  max-width: 55%;
+}
+
+@media (width <= 1200px) {
+  .hero__content {
+    max-width: 100%;
+  }
+}
+
+.hero__title {
+  margin-bottom: 34px;
+  font-family: var(--second-family);
+  font-weight: 900;
+  font-size: 57px;
+  line-height: 112%;
+  color: var(--accent-color);
+}
+
+@media (width > 768px) {
+  .hero__title {
+    font-size: 57px;
+    line-height: 112%;
+    margin-bottom: 34px;
+  }
+}
+
+@media (width <= 768px) {
+  .hero__title {
+    font-size: 32px;
+    line-height: 106%;
+    margin-bottom: 20px;
+  }
+}
+
+.hero__text {
+  display: block;
+  max-width: 551px;
+}
+
+@media (width > 768px) {
+  .hero__text {
+    margin-bottom: 34px;
+  }
+}
+
+@media (width <= 576px) {
+  .hero__text {
+    max-width: 100%;
+  }
+}
+
+@media (width <= 768px) {
+  .hero__text {
+    margin-bottom: 23px;
+    font-size: 14px;
+    line-height: 157%;
+  }
+}
+
+@media (width > 768px) {
+  .hero__button {
+    margin-bottom: 46px;
+  }
+}
+
+@media (width <= 768px) {
+  .hero__button {
+    min-width: 358px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+.hero__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero__article-text {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  padding-right: 32px;
+  padding-left: 32px;
+}
+
+.hero__article-text:nth-child(1) {
+  padding-left: 0;
+}
+
+.hero__article-text:nth-child(3) {
+  border-right: none;
+  padding-right: 0;
+}
+
+@media (width <= 576px) {
+  .hero__article-text:nth-child(2) {
+    border-right: none;
+    padding-right: 0;
+  }
+  .hero__article-text:nth-child(3) {
+    margin-top: 12px;
+  }
+  .hero__wrapper {
+    justify-content: center;
+  }
+}
+
+.hero__number {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--accent-color);
+  margin-bottom: 5px;
+}
+
+@media (width <= 768px) {
+  .hero__number {
+    margin-bottom: 3px;
+    font-size: 24px;
+  }
+  .hero__description {
+    font-size: 12px;
+  }
+}
+
+.hero__image-wrapper {
+  max-width: 45%;
+  transform: translateX(60px) translateY(-40px);
+  position: relative;
+}
+
+@media (width <= 1200px) {
+  .hero__image-wrapper {
+    transform: translateX(clamp(-12px, -6.58rem + 28.69vw, 60px))
+      translateY(-35px);
+    margin-top: 130px;
+    max-width: 100%;
+  }
+}
+
+.hero__image {
+  transform: scale(1.2);
+  /* 
+  390-1920 */
+
+  max-width: clamp(390px, 20.71rem + 15.03vw, 620px);
+  max-height: auto;
+}
+
+@media (width <= 576px) {
+  .hero__image-wrapper {
+    margin-top: 0;
+  }
+  .hero__image {
+    transform: scale(1.2);
+
+    /* 
+  390-1920 */
+    transform: translateX(0) translateY(40px);
+    max-width: clamp(390px, 20.71rem + 15.03vw, 620px);
+    max-height: auto;
+  }
+}
+
+.hero__image-wrapper::before {
+  content: " ";
+  position: absolute;
+  top: 47%;
+  right: 99%;
+  display: block;
+  background-image: url("../../icons/hero-star-1.svg");
+  width: 56px;
+  height: 56px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero__image-wrapper::after {
+  content: " ";
+  position: absolute;
+  top: 2%;
+  right: -11%;
+  display: block;
+  background-image: url("../../icons/hero-star-2.svg");
+  width: 104px;
+  height: 104px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (width <= 576px) {
+  .hero__image-wrapper::before {
+    background-image: url("../../icons/hero-star-3.svg");
+    width: 44px;
+    height: 44px;
+    top: 42%;
+    right: 86%;
+  }
+
+  .hero__image-wrapper::after {
+    background-image: url("../../icons/hero-star-4.svg");
+    width: 76px;
+    height: 76px;
+    top: 17%;
+    right: -1%;
+  }
+}
