@@ -1,0 +1,19 @@
+.button-white {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--accent-color);
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 62px;
+  padding: 16px 54px;
+  text-align: center;
+  transition:
+    background-color var(--transition-time),
+    color var(--transition-time);
+}
+
+.button-white:hover {
+  color: var(--btn-color);
+  background-color: var(--font-second-color);
+}

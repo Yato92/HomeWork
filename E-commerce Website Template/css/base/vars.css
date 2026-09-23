@@ -6,8 +6,13 @@
   --font-other: "Inter", sans-serif;
 
   /* FONTS COLORS */
+  --font-accent-sell: #f33;
   --font-second-color: #000;
+  --font-third-color: #000;
   --nav-font-color: #000;
+  --card-font-color: #000;
+  --price-removed-font-color: rgba(0, 0, 0, 0.4);
+  --price-font-color: #000;
   --p-font-color: rgba(0, 0, 0, 0.6);
 
   /* CONTAINER */
@@ -17,6 +22,7 @@
 
   /* COLORS */
 
+  --bg-accent-sell: rgba(255, 51, 51, 0.1);
   --bg-main-color: #fff;
   --btn-color: #fff;
   --accent-color: #000;

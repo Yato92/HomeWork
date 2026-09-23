@@ -2,6 +2,7 @@
   font-family: var(--font-family);
   font-weight: 400;
   color: var(--font-second-color);
+  scroll-behavior: smooth;
 }
 
 .page__body {
@@ -37,5 +38,80 @@ button:focus-visible {
   .text-description {
     font-size: 14px;
     line-height: 157%;
+  }
+}
+
+.second-title {
+  font-family: var(--second-family);
+  font-weight: 900;
+  font-size: 48px;
+  text-align: center;
+  color: var(--font-second-color);
+}
+
+@media (width > 768px) {
+  .second-title {
+    font-size: 48px;
+  }
+}
+
+@media (width <= 768px) {
+  .second-title {
+    font-size: 30px;
+  }
+}
+
+.card__title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--card-font-color);
+}
+
+@media (width > 768px) {
+  .card__title {
+    font-size: 20px;
+  }
+}
+
+@media (width <= 768px) {
+  .card__title {
+    font-size: 15px;
+  }
+}
+
+.price-text {
+  font-family: var(--font-family);
+  font-weight: 700;
+  color: var(--price-font-color);
+}
+
+@media (width > 768px) {
+  .price-text {
+    font-size: 24px;
+  }
+}
+
+@media (width <= 768px) {
+  .price-text {
+    font-size: 18px;
+  }
+}
+
+.price-removed {
+  font-weight: 700;
+  text-decoration: line-through;
+  color: var(--price-removed-font-color);
+}
+
+@media (width > 768px) {
+  .price-removed {
+    font-size: 24px;
+  }
+}
+
+@media (width <= 768px) {
+  .price-removed {
+    font-size: 18px;
   }
 }

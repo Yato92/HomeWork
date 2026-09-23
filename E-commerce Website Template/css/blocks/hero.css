@@ -165,7 +165,7 @@
 
 @media (width <= 1200px) {
   .hero__image-wrapper {
-    transform: translateX(clamp(-12px, -6.58rem + 28.69vw, 60px))
+    transform: translateX(clamp(-12px, -7.58rem + 28.69vw, 60px))
       translateY(-35px);
     margin-top: 130px;
     max-width: 100%;
@@ -190,7 +190,7 @@
 
     /* 
   390-1920 */
-    transform: translateX(0) translateY(40px);
+    transform: translateX(-7px) translateY(40px);
     max-width: clamp(390px, 20.71rem + 15.03vw, 620px);
     max-height: auto;
   }

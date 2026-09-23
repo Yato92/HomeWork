@@ -1,14 +1,17 @@
 .logos {
   background-color: var(--accent-color);
+  overflow: hidden;
 }
 
 .logos__wrapper {
+  transform: translateX(150%);
   padding-block: 45px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 106px;
-  flex-wrap: wrap;
+
+  animation: AnimationLogosRight 10s linear infinite;
 }
 
 .logos__wrapper picture {
@@ -22,7 +25,7 @@
 @media (width <= 1300px) {
   .logos__wrapper {
     justify-content: center;
-    gap: 34px;
+    gap: 100px;
   }
   #versace {
     width: 116px;
@@ -43,5 +46,99 @@
   #calvinKlein {
     width: 137px;
     height: 25px;
+  }
+}
+
+@keyframes AnimationLogosRight {
+  0% {
+    transform: translateX(140%);
+  }
+
+  100% {
+    transform: translateX(-140%);
+  }
+}
+
+@media (width <= 1400px) {
+  @keyframes AnimationLogosRight {
+    0% {
+      transform: translateX(120%);
+    }
+
+    100% {
+      transform: translateX(-120%);
+    }
+  }
+}
+
+@media (width <= 1300px) {
+  @keyframes AnimationLogosRight {
+    0% {
+      transform: translateX(110%);
+    }
+
+    100% {
+      transform: translateX(-110%);
+    }
+  }
+}
+
+@media (width <= 1200px) {
+  @keyframes AnimationLogosRight {
+    0% {
+      transform: translateX(120%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+@media (width <= 992px) {
+  @keyframes AnimationLogosRight {
+    0% {
+      transform: translateX(140%);
+    }
+
+    100% {
+      transform: translateX(-120%);
+    }
+  }
+}
+
+@media (width <= 768px) {
+  @keyframes AnimationLogosRight {
+    0% {
+      transform: translateX(160%);
+    }
+
+    100% {
+      transform: translateX(-140%);
+    }
+  }
+}
+
+@media (width <= 576px) {
+  @keyframes AnimationLogosRight {
+    0% {
+      transform: translateX(180%);
+    }
+
+    100% {
+      transform: translateX(-170%);
+    }
+  }
+}
+
+@media (width <= 450px) {
+  @keyframes AnimationLogosRight {
+    0% {
+      transform: translateX(200%);
+    }
+
+    100% {
+      transform: translateX(-200%);
+    }
   }
 }

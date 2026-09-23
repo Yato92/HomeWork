@@ -4,4 +4,9 @@
   color: var(--btn-color);
   padding: 15px 47px;
   border-radius: 62px;
+  transition: transform var(--transition-time);
+}
+
+.button:hover {
+  transform: scale(1.1);
 }

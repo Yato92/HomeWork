@@ -78,7 +78,9 @@
               <a class="menu__link" href="#">Скидки</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">Новые поступления</a>
+              <a class="menu__link" href="#new-collections"
+                >Новые поступления</a
+              >
             </li>
             <li class="menu__item">
               <a class="menu__link" href="#">Бренды</a>
@@ -168,21 +170,21 @@
 
             <div class="hero__wrapper">
               <article class="hero__article-text">
-                <p class="hero__number">200+</p>
+                <h2 class="hero__number">200+</h2>
                 <p class="hero__description text-description">
                   Всемирных брендов
                 </p>
               </article>
 
               <article class="hero__article-text">
-                <p class="hero__number">2,000+</p>
+                <h2 class="hero__number">2,000+</h2>
                 <p class="hero__description text-description">
                   Качественных товаров
                 </p>
               </article>
 
               <article class="hero__article-text">
-                <p class="hero__number">30,000+</p>
+                <h2 class="hero__number">30,000+</h2>
                 <p class="hero__description text-description">
                   Счастливых клиентов
                 </p>
@@ -270,6 +272,305 @@
           </div>
         </div>
       </aside>
+
+      <section class="new-collections" id="new-collections">
+        <div class="new-collections__container container">
+          <h2 class="new-collections__title second-title">НОВЫЕ ПОСТУПЛЕНИЯ</h2>
+
+          <div class="new-collections__wrapper-cards">
+            <article class="new-collections__card card">
+              <a class="card__link" href="#">
+                <picture class="card__wrapper-image">
+                  <source srcset="./image/cards/1.webp" type="image/webp" />
+                  <img
+                    class="card__image"
+                    src="./image/cards/1.png"
+                    width="296"
+                    height="243"
+                    alt="Футболка с лентой"
+                  />
+                </picture>
+
+                <h3 class="card__title">Футболка с лентой</h3>
+
+                <div class="card__grade">
+                  <svg width="104" height="19">
+                    <use
+                      class="card__icon-star"
+                      href="./icons/cards-stars/card-stars(4,5).svg"
+                    ></use>
+                  </svg>
+                  <p class="card__num">4.5/<span>5</span></p>
+                </div>
+
+                <div class="card__price">
+                  <p class="card__price-text price-text">₽5000</p>
+                </div>
+              </a>
+            </article>
+
+            <article class="new-collections__card card">
+              <a class="card__link" href="" #>
+                <picture class="card__wrapper-image">
+                  <source srcset="./image/cards/2.webp" type="image/webp" />
+                  <img
+                    class="card__image"
+                    src="./image/cards/2.png"
+                    width="268"
+                    height="259"
+                    alt="Узкие джинсы"
+                  />
+                </picture>
+
+                <h3 class="card__title">Узкие джинсы</h3>
+
+                <div class="card__grade">
+                  <svg width="80" height="19">
+                    <use
+                      class="card__icon-star"
+                      href="./icons/cards-stars/card-stars(3,5).svg"
+                    ></use>
+                  </svg>
+                  <p class="card__num">3.5/<span>5</span></p>
+                </div>
+
+                <div class="card__price">
+                  <p class="card__price-text price-text">₽5000</p>
+                  <p class="card__price-text price-removed">₽6000</p>
+                  <p class="card__accent-text">-20%</p>
+                </div>
+              </a>
+            </article>
+
+            <article class="new-collections__card card">
+              <a class="card__link" href="#">
+                <picture class="card__wrapper-image">
+                  <source srcset="./image/cards/3.webp" type="image/webp" />
+                  <img
+                    class="card__image"
+                    src="./image/cards/3.png"
+                    width="296"
+                    height="238"
+                    alt="Клетчатая рубашка"
+                  />
+                </picture>
+
+                <h3 class="card__title">Клетчатая рубашка</h3>
+
+                <div class="card__grade">
+                  <svg width="104" height="19">
+                    <use
+                      class="card__icon-star"
+                      href="./icons/cards-stars/card-stars(4,5).svg"
+                    ></use>
+                  </svg>
+                  <p class="card__num">4.5/<span>5</span></p>
+                </div>
+
+                <div class="card__price">
+                  <p class="card__price-text price-text">₽7000</p>
+                </div>
+              </a>
+            </article>
+
+            <article class="new-collections__card card">
+              <a class="card__link" href="#">
+                <picture class="card__wrapper-image">
+                  <source srcset="./image/cards/4.webp" type="image/webp" />
+                  <img
+                    class="card__image"
+                    src="./image/cards/4.png"
+                    width="296"
+                    height="234"
+                    alt="Футболка с полосами"
+                  />
+                </picture>
+
+                <h3 class="card__title">Футболка с полосами</h3>
+
+                <div class="card__grade">
+                  <svg width="104" height="19">
+                    <use
+                      class="card__icon-star"
+                      href="./icons/cards-stars/card-stars(4,5).svg"
+                    ></use>
+                  </svg>
+                  <p class="card__num">4.5/<span>5</span></p>
+                </div>
+
+                <div class="card__price">
+                  <p class="card__price-text price-text">₽6000</p>
+                  <p class="card__price-text price-removed">₽8000</p>
+                  <p class="card__accent-text">-30%</p>
+                </div>
+              </a>
+            </article>
+          </div>
+          <a
+            class="new-collections__button button-white"
+            href="#"
+            aria-label="Кнопка для отображения всех новых поступлений"
+            >Посмотреть всё</a
+          >
+        </div>
+      </section>
+
+      <section class="best-sellers">
+        <div class="best-sellers__container container">
+          <h2 class="best-seller__title second-title">ЛИДЕРЫ ПРОДАЖ</h2>
+
+          <div class="best-seller__wrapper-cards">
+            <article class="best-seller__card card">
+              <a class="card__link" href="#">
+                <picture class="card__wrapper-image">
+                  <source srcset="./image/cards/5.webp" type="image/webp" />
+                  <img
+                    class="card__image"
+                    src="./image/cards/5.png"
+                    alt="Футболка с лентой"
+                  />
+                </picture>
+
+                <h3 class="card__title">Рубашка в полоску</h3>
+
+                <div class="card__grade">
+                  <svg width="114" height="19">
+                    <use
+                      class="card__icon-star"
+                      href="./icons/cards-stars/card-stars(5).svg"
+                    ></use>
+                  </svg>
+                  <p class="card__num">5.0/<span>5</span></p>
+                </div>
+
+                <div class="card__price">
+                  <p class="card__price-text price-text">₽5000</p>
+                  <p class="card__price-text price-removed">₽6000</p>
+                  <p class="card__accent-text">-20%</p>
+                </div>
+              </a>
+            </article>
+
+            <article class="best-seller__card card">
+              <a class="card__link" href="#">
+                <picture class="card__wrapper-image">
+                  <source srcset="./image/cards/6.webp" type="image/webp" />
+                  <img
+                    class="card__image"
+                    src="./image/cards/6.png"
+                    alt="Футболка с лентой"
+                  />
+                </picture>
+
+                <h3 class="card__title">Футболка «Courage»</h3>
+
+                <div class="card__grade">
+                  <svg width="90" height="19">
+                    <use
+                      class="card__icon-star"
+                      href="./icons/cards-stars/card-stars(4).svg"
+                    ></use>
+                  </svg>
+                  <p class="card__num">4.0/<span>5</span></p>
+                </div>
+
+                <div class="card__price">
+                  <p class="card__price-text price-text">₽5000</p>
+                </div>
+              </a>
+            </article>
+
+            <article class="best-seller__card card">
+              <a class="card__link" href="#">
+                <picture class="card__wrapper-image">
+                  <source srcset="./image/cards/7.webp" type="image/webp" />
+                  <img
+                    class="card__image"
+                    src="./image/cards/7.png"
+                    alt="Футболка с лентой"
+                  />
+                </picture>
+
+                <h3 class="card__title">Свободные бермуды</h3>
+
+                <div class="card__grade">
+                  <svg width="66" height="19">
+                    <use
+                      class="card__icon-star"
+                      href="./icons/cards-stars/card-stars(3).svg"
+                    ></use>
+                  </svg>
+                  <p class="card__num">3.0/<span>5</span></p>
+                </div>
+
+                <div class="card__price">
+                  <p class="card__price-text price-text">₽4000</p>
+                </div>
+              </a>
+            </article>
+
+            <article class="best-seller__card card">
+              <a class="card__link" href="#">
+                <picture class="card__wrapper-image">
+                  <source srcset="./image/cards/8.webp" type="image/webp" />
+                  <img
+                    class="card__image"
+                    src="./image/cards/8.png"
+                    alt="Футболка с лентой"
+                  />
+                </picture>
+
+                <h3 class="card__title">Потертые узкие джинсы</h3>
+
+                <div class="card__grade">
+                  <svg width="104" height="19">
+                    <use
+                      class="card__icon-star"
+                      href="./icons/cards-stars/card-stars(4,5).svg"
+                    ></use>
+                  </svg>
+                  <p class="card__num">4.5/<span>5</span></p>
+                </div>
+
+                <div class="card__price">
+                  <p class="card__price-text price-text">₽7000</p>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <a
+            class="best-seller__button button-white"
+            href="#"
+            aria-label="Кнопка для отображения всех новых поступлений"
+            >Посмотреть всё</a
+          >
+        </div>
+      </section>
+
+      <section class="own-style">
+        <div class="own-style__container container">
+          <h2 class="own-style__title second-title">ВЫБЕРИ СВОЙ СТИЛЬ</h2>
+
+          <div class="own-style__wrapper">
+            <a class="own-style__free" href="#">
+              <p class="own-style__text">Свободный</p>
+            </a>
+
+            <a class="own-style__formal" href="#">
+              <p class="own-style__text">Формальный</p>
+            </a>
+
+            <a class="own-style__evening" href="#">
+              <p class="own-style__text">Вечерний</p>
+            </a>
+
+            <a class="own-style__sport" href="#">
+              <p class="own-style__text">Спорт</p>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>

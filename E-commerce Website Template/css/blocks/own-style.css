@@ -1,0 +1,150 @@
+.own-style {
+  padding-block: 80px;
+}
+
+@media (width <= 768px) {
+  .own-style {
+    padding-block: 50px;
+  }
+}
+.own-style__container {
+  padding: 70px 64px 76px 64px;
+  background-color: var(--bg-cards-color);
+  border-radius: 40px;
+}
+
+@media (width <= 1200px) {
+  .own-style__container {
+    padding: 28px 24px 28px 24px;
+  }
+}
+
+.own-style__title {
+  margin-bottom: 64px;
+}
+@media (width <= 768px) {
+  .own-style__title {
+    margin-bottom: 28px;
+  }
+}
+
+.own-style__text {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--font-third-color);
+  padding-top: 25px;
+  padding-left: 36px;
+}
+
+@media (width <= 768px) {
+  .own-style__text {
+    font-size: 24px;
+    padding-top: 16px;
+    padding-left: 24px;
+  }
+}
+
+.own-style__wrapper {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "free formal formal "
+    "evening evening sport ";
+  transition: transform var(--transition-time);
+}
+
+@media (width <= 912px) {
+  .own-style__wrapper {
+    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "free formal "
+      "evening sport";
+  }
+}
+
+@media (width <= 576px) {
+  .own-style__wrapper {
+    gap: 16px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "free "
+      "formal "
+      "evening"
+      "sport";
+  }
+}
+
+.own-style__free {
+  background-position: center;
+  object-fit: cover;
+  overflow: hidden;
+  background-image: url("../../image/own-style/1.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: clamp(190px, 10.3rem + 6.47vw, 289px);
+  border-radius: 20px;
+  grid-area: free;
+}
+.own-style__formal {
+  background-position: center;
+  overflow: hidden;
+  background-image: url("../../image/own-style/2.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: clamp(190px, 10.3rem + 6.47vw, 289px);
+  border-radius: 20px;
+  grid-area: formal;
+}
+
+.own-style__evening {
+  overflow: hidden;
+  background-image: url("../../image/own-style/3.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: clamp(190px, 10.3rem + 6.47vw, 289px);
+  border-radius: 20px;
+  grid-area: evening;
+}
+
+.own-style__sport {
+  overflow: hidden;
+  background-position: center;
+  background-image: url("../../image/own-style/4.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: clamp(190px, 10.3rem + 6.47vw, 289px);
+  border-radius: 20px;
+  grid-area: sport;
+}
+.own-style__free:hover,
+.own-style__formal:hover,
+.own-style__evening:hover,
+.own-style__sport:hover {
+  transition: transform var(--transition-time);
+}
+
+.own-style__free:hover,
+.own-style__formal:hover,
+.own-style__evening:hover,
+.own-style__sport:hover {
+  transform: translateY(-5px);
+}
+
+@media (width <= 576px) {
+  .own-style__free {
+    background-image: url("../../image/own-style/adaptive/1.webp");
+  }
+  .own-style__formal {
+    background-image: url("../../image/own-style/adaptive/2.webp");
+  }
+  .own-style__evening {
+    background-image: url("../../image/own-style/adaptive/3.webp");
+  }
+  .own-style__sport {
+    background-image: url("../../image/own-style/adaptive/4.webp");
+  }
+}
