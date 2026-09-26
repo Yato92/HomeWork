@@ -31,13 +31,13 @@ button:focus-visible {
 }
 
 .text-regular,
-.text--light {
+.text-light {
   font-size: 16px;
   line-height: 140%;
   color: var(--main-color);
 }
 
-.text--light {
+.text-light {
   font-weight: 300;
 }
 
@@ -45,12 +45,43 @@ button:focus-visible {
   font-weight: 400;
 }
 
-.title-md {
+.title-md,
+.title-sm {
   font-weight: 600;
-
-  /* min-width: 375, max-width: 992 */
-
-  font-size: clamp(32px, 0.936rem + 4.54vw, 60px);
   text-transform: uppercase;
   color: var(--main-color);
+}
+
+.title-md {
+  /* min-width: 375, max-width:768 */
+
+  font-size: clamp(32px, 0.936rem + 4.54vw, 60px);
+}
+
+.title-sm {
+  font-size: clamp(24px, 1.023rem + 2.04vw, 32px);
+}
+
+@media (width > 576px) {
+  .section {
+    padding-bottom: 140px;
+  }
+}
+
+@media (width <= 576px) {
+  .section {
+    padding-bottom: 80px;
+  }
+}
+
+@media (width > 576px) {
+  .section__title {
+    margin-bottom: 40px;
+  }
+}
+
+@media (width <= 576px) {
+  .section__title {
+    margin-bottom: 30px;
+  }
 }
