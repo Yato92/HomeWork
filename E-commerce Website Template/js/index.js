@@ -1,5 +1,6 @@
 import HeaderFixed from "./header.js";
 import BurgerMenu from "./burger.js";
+import { reviewsSlider } from "./reviews-slider.js";
 
 try {
   const headerFixed = new HeaderFixed({
@@ -23,6 +24,7 @@ try {
       BREAKPOINT: 992, // То, на какому размере должно применяться меню
       MAIN: "main",
     },
+    reviewsSlider(),
     // Убираем тень при открытие бургера у Header
   );
 } catch (error) {

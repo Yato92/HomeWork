@@ -29,35 +29,6 @@
   }
 }
 
-.header__logo {
-  position: relative;
-  font-family: var(--third-family);
-  font-weight: 700;
-  font-size: 32px;
-  color: var(--font-second-color);
-  align-self: center;
-  transform: translateY(-3px);
-}
-
-@media (width <= 992px) {
-  .header__logo {
-    width: fit-content;
-    margin-right: auto;
-  }
-}
-
-@media (width > 768px) {
-  .header__logo {
-    font-size: 32px;
-  }
-}
-
-@media (width <= 768px) {
-  .header__logo {
-    font-size: 25px;
-  }
-}
-
 @media (width > 992px) {
   .header__search {
     display: flex;

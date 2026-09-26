@@ -21,6 +21,35 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
+.logo {
+  position: relative;
+  font-family: var(--third-family);
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--font-second-color);
+  align-self: center;
+  transform: translateY(-3px);
+}
+
+@media (width <= 992px) {
+  .logo {
+    width: fit-content;
+    margin-right: auto;
+  }
+}
+
+@media (width > 768px) {
+  .logo {
+    font-size: 32px;
+  }
+}
+
+@media (width <= 768px) {
+  .logo {
+    font-size: 25px;
+  }
+}
+
 .text-description {
   font-family: var(--font-family);
   font-weight: 400;
