@@ -96,11 +96,24 @@
 }
 
 .footer__logos-link {
-  transition: transform var(--transition-time);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 100%;
+  color: #000;
+  background-color: #fff;
+  transition:
+    background-color var(--transition-time),
+    color var(--transition-time),
+    transform var(--transition-time);
 }
 
 @media (any-hover: hover) {
   .footer__logos-link:hover {
+    color: #fff;
+    background-color: #000;
     transform: translateY(-3px);
   }
 }
@@ -147,14 +160,17 @@
   font-weight: 400;
   font-size: clamp(14px, 0.84rem + 0.13vw, 16px);
   color: var(--footer__link-color);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 0px;
   transition:
-    text-decoration var(--transition-time),
+    text-decoration-color var(--transition-time),
     text-underline-offset var(--transition-time);
 }
 
 @media (any-hover: hover) {
   .footer__list-link:hover {
-    text-decoration: underline;
+    text-decoration-color: currentColor;
     text-underline-offset: 3px;
   }
 }

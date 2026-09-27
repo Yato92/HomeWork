@@ -130,9 +130,17 @@
   font-size: clamp(14px, 0.84rem + 0.13vw, 16px);
   color: #000;
   text-align: center;
-  transition: background-color var(--transition-time);
+  transition:
+    background-color var(--transition-time),
+    transform var(--transition-time);
+}
+
+@media (any-hover: hover) {
+  .subscribe__button:hover {
+    transform: scale(1.02);
+  }
 }
 
 .subscribe__button:active {
-  background-color: #dedededc;
+  background-color: #fffffff0;
 }

@@ -82,6 +82,14 @@
   transition: transform var(--transition-time);
 }
 
+@media (any-hover: hover) {
+  .header__basket:hover,
+  .header__profile:hover,
+  .header__search-icon:hover {
+    transform: scale(1.1);
+  }
+}
+
 .header__basket:active,
 .header__profile:active,
 .header__search-icon:active {

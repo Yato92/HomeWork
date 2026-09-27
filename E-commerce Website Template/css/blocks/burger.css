@@ -12,9 +12,10 @@
     justify-content: center;
     z-index: var(--layers-3);
   }
-  .burger__icon-cross {
-    width: 19px;
-    height: 15px;
+
+  .burger__icon-cross-inner {
+    position: relative;
+    left: -25px;
   }
 
   .burger__icon-menu,

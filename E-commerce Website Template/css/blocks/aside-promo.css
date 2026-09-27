@@ -29,6 +29,13 @@
   color: #fff;
   text-decoration: underline;
   margin-left: 5px;
+  transition: transform var(--transition-time);
+}
+
+@media (any-hover: hover) {
+  .promo-bar__link:hover {
+    transform: scale(1.05);
+  }
 }
 
 @media (width > 768px) {
@@ -46,4 +53,13 @@
 .promo-bar__icon-close {
   position: absolute;
   right: 0px;
+  display: flex;
+  align-items: center;
+  transition: transform var(--transition-time);
+}
+
+@media (any-hover: hover) {
+  .promo-bar__icon-close:hover {
+    transform: scale(1.1);
+  }
 }

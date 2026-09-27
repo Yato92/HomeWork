@@ -46,11 +46,19 @@
   font-weight: 400;
   font-size: 16px;
   color: var(--nav-font-color);
-  transition: text-decoration var(--transition-time);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 0px;
+  transition:
+    color var(--transition-time),
+    text-underline-offset var(--transition-time);
 }
 
-.menu__link:hover {
-  text-decoration: underline;
+@media (any-hover: hover) {
+  .menu__link:hover {
+    text-decoration-color: currentColor;
+    text-underline-offset: 3px;
+  }
 }
 
 .menu__button {
