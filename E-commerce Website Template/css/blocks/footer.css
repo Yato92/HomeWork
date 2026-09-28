@@ -4,6 +4,18 @@
   padding-bottom: 88px;
 }
 
+@media (width > 576px) {
+  .footer {
+    padding-bottom: 88px;
+  }
+}
+
+@media (width <= 576px) {
+  .footer {
+    padding-bottom: 76px;
+  }
+}
+
 .footer__header {
   display: flex;
   flex-wrap: wrap;
@@ -192,7 +204,6 @@
 
 .footer__bottom {
   padding-top: 25px;
-  padding-bottom: 88px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -201,9 +212,7 @@
 @media (width <= 768px) {
   .footer__bottom {
     justify-content: center;
-
     padding-top: 16px;
-    padding-bottom: 76px;
   }
 }
 
