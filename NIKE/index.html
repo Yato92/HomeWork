@@ -339,7 +339,13 @@
                   </button>
                 </div>
                 <div class="product__buy-wrapper">
-                  <button class="product__buy-button">Купить в 1 клик</button>
+                  <button
+                    class="product__buy-button"
+                    data-modal-button="buy"
+                    data-modal-speed="300"
+                  >
+                    Купить в 1 клик
+                  </button>
                   <button
                     class="product__cart-button"
                     aria-label="Добавить в корзину"
@@ -866,5 +872,52 @@
         >
       </div>
     </footer>
+
+    <div class="modal">
+      <div class="modal__window modal-buy" data-modal-window="buy">
+        <button
+          class="modal__close"
+          aria-label="Закрыть"
+          title="Закрыть"
+          data-modal-close
+        >
+          <svg width="24" height="24">
+            <use href="./icons/sprite.svg#cross"></use>
+          </svg>
+        </button>
+        <div class="modal__content modal-buy__content">
+          <h3 class="modal-buy__title title-sm">Заявка на заказ</h3>
+          <form class="modal-buy__form">
+            <label class="modal-buy__lable"></label>
+            <input
+              class="modal-buy__input"
+              type="text"
+              placeholder="Ваше имя"
+              required
+              name="name"
+            />
+            <label class="modal-buy__lable"></label>
+            <input
+              class="modal-buy__input"
+              type="tel"
+              placeholder="Ваш телефон"
+              required
+              name="phone"
+            />
+
+            <label class="modal-buy__lable"></label>
+            <input
+              class="modal-buy__input"
+              type="email"
+              placeholder="Ваша почта"
+              required
+              name="email"
+            />
+
+            <button class="modal-buy__submit">отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

@@ -1,5 +1,6 @@
 import HeaderFixed from "./header.js";
 import BurgerMenu from "./burger.js";
+import Modal from "./modal.js";
 import { productSlider } from "./product-slider.js";
 import { sizes } from "./sizes.js";
 
@@ -26,8 +27,14 @@ try {
       MAIN: "main",
     },
     headerFixed, // Убираем тень при открытие бургера у Header
+
+    new Modal({
+      PAGE_BODY: "page__body", // Для чего применяем
+      PAGE_BODY_NO_SCROLL: "page__body--no-scroll", // Чтобы при открытии бургер меню, нельзя было скролить сайт, добавляем overflow-y:
+    }),
+
     productSlider(), // вызов слайдера
-    sizes(),
+    sizes(), // вызов нажатия кнопок
   );
 } catch (error) {
   console.error(error);
