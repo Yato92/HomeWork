@@ -291,8 +291,12 @@ li a {
     }
 }
 
+.wrpapper-js{
+    pading-top:30px;
+    
+}
+
 .content__list-item-js{
-    margin-top:30px;
     background-color: #FFDF00;
     transition: all .3s;
 }
