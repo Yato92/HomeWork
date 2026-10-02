@@ -55,14 +55,6 @@ const USER_NAME = String(
 );
 const PASSWORD = +prompt("Введите пароль:");
 
-switch (true) {
-  case USER_NAME === "admin" || (USER_NAME === "user" && PASSWORD === 123456):
-    console.log("Доступ разрешен!");
-    break;
-  default:
-    console.log("Доступ запрещен!");
-}
-
 if (USER_NAME === "admin" || USER_NAME === "user") {
   if (PASSWORD === 123456) {
     console.log("Доступ разрешен!");
@@ -124,7 +116,7 @@ if (weight <= 0) {
 } else if (weight < 1) {
   console.log(`базовая стоимость — 5$`);
   base = 5;
-} else if (weight <= 5 || weight === 1) {
+} else if (weight <= 5) {
   console.log(`базовая стоимость — 10$`);
   base = 10;
 } else {
