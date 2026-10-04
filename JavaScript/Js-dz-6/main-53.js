@@ -28,11 +28,10 @@ const getUserAverageAge = arr => {
   arr.forEach(el => {
     sum += el.age;
   });
-  middleAge = sum / arr.length;
-  console.log(middleAge);
+  return (middleAge = sum / arr.length);
 };
 
-getUserAverageAge(users);
+console.log(getUserAverageAge(users));
 
 // Задание 3.
 // Используя массив пользователей users из предыдущего задания, напишите функцию getAllAdmins(users), которая возвращает массив всех администраторов.
@@ -46,10 +45,10 @@ const getAllAdmins = arr => {
     }
   });
 
-  console.log(admins);
+  return admins;
 };
 
-getAllAdmins(users);
+console.log(getAllAdmins(users));
 
 // Задание 4.
 // Напишите функцию first(arr, n), которая возвращает первые n элементов массива. Если n == 0, возвращается пустой массив [], если n == undefined, то возвращается массив с первым элементом.
@@ -60,10 +59,10 @@ const first = (arr, n) => {
   let newArr = [];
 
   if (n === 0) {
-    console.log(newArr);
+    return newArr;
   } else if (n === undefined) {
     {
-      console.log(arr[0]);
+      return arr[0];
     }
   } else {
     arr.forEach((el, index) => {
@@ -71,8 +70,8 @@ const first = (arr, n) => {
         newArr.push(el);
       }
     });
-    console.log(newArr);
+    return newArr;
   }
 };
 
-first(test, 1);
+console.log(first(test, 1));
