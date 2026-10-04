@@ -16,15 +16,14 @@ console.log(person);
 const object1 = {};
 
 const isEmpty = object => {
-  if (object) {
-    for (let key in object) {
-      return false;
-    }
+  for (let key in object) {
+    return false;
   }
+
   return true;
 };
 
-console.log(isEmpty(object1));
+console.log(isEmpty(person));
 
 // Задача 3.
 // Создайте объект task с несколькими свойствами: title, description, isCompleted.
@@ -49,23 +48,22 @@ const cloneAndModify = (object, modifications) => {
   for (let key in newObject) {
     console.log(`${key}`, `${newObject[key]}`);
   }
+  return newObject;
 };
 cloneAndModify(task, taskLength);
 
 // Задача 4.
 // Создайте функцию callAllMethods, которая принимает объект и вызывает все его методы.
 
-// Пример использования:
 // const myObject = {
-//     method1() {
-//         console.log('Метод 1 вызван');
-//     },
-//     method2() {
-//         console.log('Метод 2 вызван');
-//     },
-//     property: 'Это не метод'
+//   method1() {
+//     console.log("Метод 1 вызван");
+//   },
+//   method2() {
+//     console.log("Метод 2 вызван");
+//   },
+//   property: "Это не метод",
 // };
-// callAllMethods(myObject);
 
 const job = {
   salary: 100,
