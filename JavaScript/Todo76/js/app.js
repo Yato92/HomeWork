@@ -1,5 +1,10 @@
 "use strict";
 
+const formEl = document.querySelector(".form");
+const inputEl = document.querySelector(".input");
+const todosEl = document.querySelector(".todos");
+const Wrapper = document.querySelector(".app");
+
 const todoKeys = {
   id: "id",
   text: "description",
@@ -66,16 +71,13 @@ const deleteTodoById = (todos, todoId) => {
   return todos;
 };
 
-const formEl = document.querySelector(".form");
-const inputEl = document.querySelector(".input");
-const todosEl = document.querySelector(".todos");
-
-console.log(formEl, inputEl, todosEl);
-
-const createTodoElement = text => {
+const createTodoElement = todo => {
   const li = document.createElement("li");
   li.classList.add("todo");
-  li.innerHTML = `<div class="todo-text">${text}</div>
+
+  li.dataset.id = todo[todoKeys.id];
+
+  li.innerHTML = `<div class="todo-text">${todo[todoKeys.text]}</div>
           <div class="todo-actions">
             <button class="button-complete button">&#10004;</button>
             <button class="button-edit button">&#10001;</button>
@@ -86,6 +88,46 @@ const createTodoElement = text => {
 };
 
 const handleCreateTodo = (todos, text) => {
-  createTodo(todos, text);
-  createTodoElement(text);
+  const todo = createTodo(todos, text);
+  const todoEl = createTodoElement(todo);
+  todosEl.prepend(todoEl);
 };
+
+formEl.addEventListener("submit", event => {
+  event.preventDefault();
+
+  const text = inputEl.value.trim();
+
+  if (!text) {
+    inputEl.value = "";
+    return;
+  }
+
+  handleCreateTodo(todos, text);
+  inputEl.value = "";
+});
+
+todosEl.addEventListener("click", event => {
+  const todo = event.target.closest(".todo");
+  if (!todo) {
+    return;
+  }
+
+  const todoId = +todo.dataset.id;
+
+  if (event.target.matches(".button-complete")) {
+    completeTodoById(todos, todoId);
+    todo.classList.toggle("completed");
+  }
+
+  if (event.target.matches(".button-delete")) {
+    deleteTodoById(todos, todoId);
+    todo.remove();
+  }
+
+  if (event.target.matches(".button-edit")) {
+    editTodoByIdText(todos, todoId);
+  }
+
+  console.log(todo);
+});
