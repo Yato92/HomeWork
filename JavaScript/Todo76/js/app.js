@@ -1,5 +1,9 @@
 "use strict";
 
+const form = document.querySelector(".form");
+const input = document.querySelector(".input");
+const todos = document.querySelector(".todos");
+
 const todoKeys = {
   id: "id",
   text: "description",
@@ -64,4 +68,22 @@ const deleteTodoById = (todos, todoId) => {
   todos.splice(todoIndex, 1);
 
   return todos;
+};
+
+const createTodoElement = text => {
+  const li = document.createElement("li");
+  li.classList.add("todo");
+  li.innerHTML = `<div class="todo-text">${text}</div>
+          <div class="todo-actions">
+            <button class="button-complete button">&#10004;</button>
+            <button class="button-edit button">&#10001;</button>
+            <button class="button-delete button">&#10006;</button>
+          </div>`;
+
+  return li;
+};
+
+const handleCreateTodo = (todos, text) => {
+  createTodo(todos, text);
+  createTodoElement(text);
 };
