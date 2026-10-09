@@ -1,16 +1,12 @@
 "use strict";
 
-const form = document.querySelector(".form");
-const input = document.querySelector(".input");
-const todos = document.querySelector(".todos");
-
 const todoKeys = {
   id: "id",
   text: "description",
   is_completed: " is_completed",
 };
 
-let todos = [];
+const todos = [];
 
 const getNewTodoId = todos => {
   return (
@@ -69,6 +65,12 @@ const deleteTodoById = (todos, todoId) => {
 
   return todos;
 };
+
+const formEl = document.querySelector(".form");
+const inputEl = document.querySelector(".input");
+const todosEl = document.querySelector(".todos");
+
+console.log(formEl, inputEl, todosEl);
 
 const createTodoElement = text => {
   const li = document.createElement("li");
