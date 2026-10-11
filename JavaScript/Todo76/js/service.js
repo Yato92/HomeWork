@@ -1,20 +1,4 @@
-"use strict";
-
-const todoKeys = {
-  id: "id",
-  text: "description",
-  is_completed: " is_completed",
-};
-
-const getTodosFromLocalStorage = () => {
-  return JSON.parse(localStorage.getItem("todos"));
-};
-
-const setTodosFromLocalStorage = todos => {
-  localStorage.setItem("todos", todos);
-};
-
-let todos = getTodosFromLocalStorage() || [];
+import { todoKeys } from "./constants.js";
 
 const getNewTodoId = todos => {
   return (
@@ -24,7 +8,7 @@ const getNewTodoId = todos => {
   );
 };
 
-const createTodo = (todos, text) => {
+export const createTodo = (todos, text) => {
   const newTodo = {
     [todoKeys.id]: getNewTodoId(todos),
     [todoKeys.text]: text,
@@ -35,7 +19,7 @@ const createTodo = (todos, text) => {
   return newTodo;
 };
 
-const completeTodoById = (todos, todoId) => {
+export const completeTodoById = (todos, todoId) => {
   const todo = todos.find(todo => {
     return todo[todoKeys.id] === todoId;
   });
@@ -49,7 +33,7 @@ const completeTodoById = (todos, todoId) => {
   return todo;
 };
 
-const editTodoByIdText = (todos, todoId, text) => {
+export const editTodoByIdText = (todos, todoId, text) => {
   const todo = todos.find(todo => {
     return todo[todoKeys.id] === todoId;
   });
@@ -59,13 +43,13 @@ const editTodoByIdText = (todos, todoId, text) => {
   return todos;
 };
 
-const deleteTodoById = (todos, todoId) => {
+export const deleteTodoById = (todos, todoId) => {
   const todoIndex = todos.findIndex(todo => {
     return todo[todoKeys.id] === todoId;
   });
 
   if (todoIndex === -1) {
-    console.log(error(`Todo with id ${todoId} not found`));
+    console.error(`Todo with id ${todoId} not found`);
     return null;
   }
 
