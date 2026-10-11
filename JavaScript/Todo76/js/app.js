@@ -3,12 +3,11 @@
 const formEl = document.querySelector(".form");
 const inputEl = document.querySelector(".input");
 const todosEl = document.querySelector(".todos");
-const Wrapper = document.querySelector(".app");
 
 const todoKeys = {
   id: "id",
   text: "description",
-  is_completed: " is_completed",
+  is_completed: "is_completed",
 };
 
 const todos = [];
@@ -62,7 +61,7 @@ const deleteTodoById = (todos, todoId) => {
   });
 
   if (todoIndex === -1) {
-    console.log(error(`Todo with id ${todoId} not found`));
+    console.error(`Todo with id ${todoId} not found`);
     return null;
   }
 
@@ -126,8 +125,35 @@ todosEl.addEventListener("click", event => {
   }
 
   if (event.target.matches(".button-edit")) {
-    editTodoByIdText(todos, todoId);
-  }
+    const textEl = todo.querySelector(".todo-text");
+    const editInput = todo.querySelector(".editInput");
 
-  console.log(todo);
+    if (!editInput) {
+      const input = document.createElement("input");
+      input.type = "text";
+      input.className = "editInput";
+      input.value = textEl.textContent;
+
+      textEl.replaceWith(input);
+      input.focus;
+
+      event.target.innerHTML = `&#10003;`;
+    } else {
+      const newText = editInput.value.trim();
+
+      if (!newText) {
+        return;
+      }
+
+      editTodoByIdText(todos, todoId, newText);
+
+      const div = document.createElement("div");
+
+      div.className = "todo-text";
+      div.textContent = newText;
+
+      editInput.replaceWith(div);
+      event.target.innerHTML = `&#10001;`;
+    }
+  }
 });
