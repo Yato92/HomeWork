@@ -26,7 +26,7 @@ export const completeTodoById = (todos, todoId) => {
 
   if (todo === undefined) {
     console.error(`Todo with id ${todoId} not found`);
-    return null;
+    return todos;
   }
 
   todo[todoKeys.is_completed] = !todo[todoKeys.is_completed];
