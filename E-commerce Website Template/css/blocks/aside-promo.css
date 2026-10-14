@@ -1,3 +1,7 @@
+.aside--close {
+  display: none;
+}
+
 .promo-bar {
   background-color: var(--accent-color);
 }

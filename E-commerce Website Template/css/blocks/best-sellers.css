@@ -12,6 +12,10 @@
   }
 }
 
+.best-seller__wrapper-cards--hidden {
+  display: none !important;
+}
+
 .best-seller__wrapper-cards {
   width: 100%;
   display: grid;

@@ -1,0 +1,47 @@
+.basket--hidden {
+  display: none;
+}
+
+.basket {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  width: 90%;
+  max-width: 500px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  padding: 40px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.basket__message {
+  margin-bottom: 20px;
+}
+
+.basket__close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333333;
+  transition: opacity 0.2s ease;
+}
+
+.basket__close-btn:hover {
+  opacity: 0.7;
+}
+
+.basket__title {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 30px 0;
+  color: #000000;
+}

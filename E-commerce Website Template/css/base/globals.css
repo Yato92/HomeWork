@@ -10,6 +10,11 @@
   background: var(--bg-main-color);
 }
 
+.page__body--blur {
+  filter: blur(4px);
+  transition: filter 0.3s ease;
+}
+
 .container {
   width: min(var(--container-width), 100% - var(--container-padding) * 2);
   margin-inline: auto;

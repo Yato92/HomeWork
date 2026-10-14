@@ -33,6 +33,10 @@
   margin-bottom: 36px;
 }
 
+.new-collections__wrapper-cards--hidden {
+  display: none !important;
+}
+
 @media (width <= 768px) {
   .new-collections__wrapper-cards {
     margin-bottom: 27px;

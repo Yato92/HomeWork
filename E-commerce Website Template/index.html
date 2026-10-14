@@ -20,10 +20,18 @@
       src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"
       defer
     ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      defer
+    />
+
     <title>SHOP.CO</title>
 
-    <script src="./js/index.js" type="module"></script>
+    <script src="./js/index.js" type="module" defer></script>
   </head>
+
   <body class="page__body">
     <aside class="aside">
       <div class="promo-bar">
@@ -1157,5 +1165,61 @@
         </div>
       </div>
     </footer>
+
+    <div class="registration-form container registration-form--hidden">
+      <form class="registration__form">
+        <button type="button" class="registration-form__close-btn">
+          &#x2715;
+        </button>
+
+        <h2 class="registration-form-title second-title">Регистрация</h2>
+
+        <label class="registration-form__label">
+          <input
+            class="registration-form__input"
+            type="text"
+            name="username"
+            required
+            placeholder="Введите имя"
+          />
+        </label>
+
+        <label class="registration-form__label">
+          <input
+            class="registration-form__input"
+            type="email"
+            name="email"
+            required
+            placeholder="Введите почту"
+          />
+        </label>
+
+        <label class="registration-form__label">
+          <input
+            class="registration-form__input"
+            type="password"
+            name="password"
+            required
+            placeholder="Введите пароль"
+          />
+        </label>
+
+        <button type="submit" class="registration-form__btn button">
+          Отправить
+        </button>
+      </form>
+    </div>
+
+    <div class="basket basket--hidden">
+      <div class="basket__wrapper">
+        <button class="basket__close-btn" aria-label="Закрыть">&times;</button>
+
+        <h2 class="basket__title second-title">Корзина</h2>
+
+        <div class="basket__message">Ваша корзина пуста</div>
+
+        <button class="basket__submit-btn button">Перейти к покупкам</button>
+      </div>
+    </div>
   </body>
 </html>

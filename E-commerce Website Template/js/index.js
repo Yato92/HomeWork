@@ -1,12 +1,17 @@
-import HeaderFixed from "./header.js";
+// import HeaderFixed from "./header.js";
 import BurgerMenu from "./burger.js";
 import { reviewsSlider } from "./reviews-slider.js";
+import { initClosePromoBar } from "./close-aside.js";
+import { initShowMoreCardsNewReceipts } from "./addContent/addContent.js";
+import { initShowMoreCardsBestSeller } from "./addContent/addBestSellersContent.js";
+import { initShowRegistrationForm } from "./registration-form/registration-form.js";
+import { initShowBasket } from "./basket.js";
 
 try {
-  const headerFixed = new HeaderFixed({
-    HEADER: "header", // Голова сайта к котрой применяем
-    HEADER_FIXED: "", // Добавляемое свойство(тень)
-  });
+  // const headerFixed = new HeaderFixed({
+  //   HEADER: "header", // Голова сайта к котрой применяем
+  //   HEADER_FIXED: "", // Добавляемое свойство(тень)
+  // });
 
   new BurgerMenu(
     {
@@ -30,3 +35,10 @@ try {
 } catch (error) {
   console.error(error);
 }
+
+initClosePromoBar();
+initShowMoreCardsNewReceipts();
+initShowMoreCardsBestSeller();
+initShowRegistrationForm();
+initShowBasket();
+initShowInputAction();
