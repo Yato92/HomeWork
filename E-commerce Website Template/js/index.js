@@ -41,4 +41,3 @@ initShowMoreCardsNewReceipts();
 initShowMoreCardsBestSeller();
 initShowRegistrationForm();
 initShowBasket();
-initShowInputAction();
