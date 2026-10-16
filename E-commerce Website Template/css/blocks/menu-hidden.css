@@ -1,0 +1,80 @@
+.header__container {
+  position: relative;
+}
+
+.menu-hidden {
+  z-index: 1;
+  position: absolute;
+  top: 40px;
+  left: 194px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 3px solid var(--accent-color);
+  border-radius: 10px;
+  min-width: 200px;
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity var(--transition-time),
+    visibility var(--transition-time);
+}
+
+.menu--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.menu-hidden__link:hover {
+  color: var(--bg-hero-color);
+  background-color: var(--accent-color);
+}
+
+.menu-hidden__link:active {
+  color: var(--bg-hero-color);
+  background-color: var(--accent-color);
+}
+
+.menu-hidden__link {
+  display: block;
+  margin-bottom: 1px;
+  padding: 10px;
+  transition:
+    color var(--transition-time),
+    background-color var(--transition-time);
+}
+
+.menu-hidden__item:last-child {
+  margin-bottom: 0;
+}
+
+@media (width <= 992px) {
+  .menu-hidden {
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 3px solid var(--accent-color);
+    border-radius: 10px;
+    min-width: 200px;
+    position: relative;
+    max-height: 500px;
+    opacity: 1;
+    overflow: hidden;
+    margin-top: 10px;
+    transition:
+      max-height var(--transition-time) ease-in-out,
+      opacity var(--transition-time) ease-in-out,
+      padding var(--transition-time) ease-in-out,
+      border-color var(--transition-time) ease-in-out;
+  }
+  .menu--hidden {
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-color: transparent;
+    margin-top: 0;
+  }
+}

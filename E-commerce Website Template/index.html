@@ -84,9 +84,9 @@
         <nav class="header__menu menu" id="header__menu">
           <ul class="menu__list">
             <li class="menu__item">
-              <a class="menu__link" href="#">Магазин</a>
+              <a class="menu__link" aria-expanded="false" href="#">Магазин</a>
 
-              <button class="menu__button" aria-label="Декорация">
+              <button class="menu__button" aria-label="Открыть выпадающие меню">
                 <svg width="12" height="7">
                   <use
                     class="menu__icon"
@@ -94,17 +94,41 @@
                   ></use>
                 </svg>
               </button>
+
+              <ul class="menu-hidden menu menu--hidden">
+                <li class="menu__item menu-hidden__item">
+                  <a class="menu__link menu-hidden__link" href="#best-sellers">
+                    Лидеры продаж</a
+                  >
+                </li>
+                <li class="menu__item menu-hidden__item">
+                  <a class="menu__link menu-hidden__link" href="#own-style"
+                    >Выбери свой стиль</a
+                  >
+                </li>
+                <li class="menu__item menu-hidden__item">
+                  <a class="menu__link menu-hidden__link" href="#reviews"
+                    >Что о нас говорят</a
+                  >
+                </li>
+                <li class="menu__item menu-hidden__item">
+                  <a class="menu__link menu-hidden__link" href="#footer"
+                    >Контакты</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" aria-expanded="true" href="#">Скидки</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">Скидки</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#new-collections"
+              <a class="menu__link" aria-expanded="true" href="#new-collections"
                 >Новые поступления</a
               >
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">Бренды</a>
+              <a class="menu__link" aria-expanded="true" href="#">Бренды</a>
             </li>
           </ul>
         </nav>
@@ -442,7 +466,7 @@
         </div>
       </section>
 
-      <section class="best-sellers">
+      <section class="best-sellers" id="best-sellers">
         <div class="best-sellers__container container">
           <h2 class="best-seller__title second-title">ЛИДЕРЫ ПРОДАЖ</h2>
 
@@ -581,7 +605,7 @@
         </div>
       </section>
 
-      <section class="own-style">
+      <section class="own-style" id="own-style">
         <div class="own-style__container container">
           <h2 class="own-style__title second-title">ВЫБЕРИ СВОЙ СТИЛЬ</h2>
 
@@ -605,7 +629,7 @@
         </div>
       </section>
 
-      <section class="reviews">
+      <section class="reviews" id="reviews">
         <div class="reviews__container container">
           <div class="reviews__wrapper">
             <h2 class="reviews__title second-title">ЧТО О НАС ГОВОРЯТ</h2>
@@ -884,7 +908,7 @@
         </div>
       </section>
 
-      <section class="subscription">
+      <section class="subscription" id="subscription">
         <div class="subscription__container container">
           <h2 class="subscription__title">
             БУДЬТЕ В КУРСЕ ВСЕХ ПОСЛЕДНИХ НОВОСТЕЙ
@@ -920,7 +944,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="footer__container container">
         <div class="footer__header">
           <div class="footer__other">

@@ -6,6 +6,7 @@ import { initShowMoreCardsNewReceipts } from "./addContent/addContent.js";
 import { initShowMoreCardsBestSeller } from "./addContent/addBestSellersContent.js";
 import { initShowRegistrationForm } from "./registration-form/registration-form.js";
 import { initShowBasket } from "./basket.js";
+import { initShowMenu } from "./hidden-menu.js";
 
 try {
   // const headerFixed = new HeaderFixed({
@@ -41,3 +42,4 @@ initShowMoreCardsNewReceipts();
 initShowMoreCardsBestSeller();
 initShowRegistrationForm();
 initShowBasket();
+initShowMenu();

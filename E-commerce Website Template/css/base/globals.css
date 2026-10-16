@@ -10,9 +10,8 @@
   background: var(--bg-main-color);
 }
 
-.page__body--blur {
-  filter: blur(4px);
-  transition: filter 0.3s ease;
+.page__body--no-scroll {
+  overflow: hidden;
 }
 
 .container {

@@ -2,6 +2,7 @@ export const initShowBasket = () => {
   const btnShowContainer = document.querySelector(".header__container ");
   const containerBasket = document.querySelector(".basket");
   const btnCloseBasket = document.querySelector(".basket__close-btn");
+  const bodyPage = document.querySelector(".page__body");
 
   if (!btnShowContainer || !containerBasket) return;
 
@@ -13,6 +14,7 @@ export const initShowBasket = () => {
       "animate__fadeIn",
       "animate__faster",
     );
+    bodyPage.classList.add("page__body--no-scroll");
   };
 
   const closeBasket = () => {
@@ -22,6 +24,7 @@ export const initShowBasket = () => {
       "animate__fadeIn",
       "animate__faster",
     );
+    bodyPage.classList.remove("page__body--no-scroll");
   };
 
   btnShowContainer.addEventListener("click", event => {

@@ -8,9 +8,11 @@ export const initShowRegistrationForm = () => {
   );
   const form = document.querySelector(".registration__form");
   const asideLink = document.querySelector(".promo-bar__link");
+  const bodyPage = document.querySelector(".page__body");
 
   const closeModal = () => {
     registrationContainer.classList.add("registration-form--hidden");
+    bodyPage.classList.remove("page__body--no-scroll");
   };
 
   const openModalAndAnimation = () => {
@@ -20,10 +22,10 @@ export const initShowRegistrationForm = () => {
         "animate__fadeIn",
         "animate__faster",
       ));
+    bodyPage.classList.add("page__body--no-scroll");
   };
 
   btnContainer.addEventListener("click", event => {
-    event.preventDefault();
     event.stopPropagation();
     if (!btnContainer || !btnShowContainer) {
       return;
@@ -59,7 +61,6 @@ export const initShowRegistrationForm = () => {
   });
 
   heroBtn.addEventListener("click", event => {
-    event.preventDefault();
     event.stopPropagation();
     openModalAndAnimation();
   });
